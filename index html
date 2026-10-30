@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>फीस डिस्प्ले डिज़ाइन</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .fee-section {
+            background-color: #ffffff;
+            border: 2px dashed #1e3a8a;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .main-promo {
+            display: block;
+            font-size: 48px; /* बड़ा सा ज़ीरो या फ्री */
+            font-weight: bold;
+            color: #166534; /* हरा रंग सफलता/फ्री दिखाने के लिए */
+            margin: 0;
+            line-height: 1;
+        }
+        .sub-text {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 10px;
+        }
+        .actual-cost {
+            display: block;
+            font-size: 12px; /* बहुत छोटा आकार */
+            color: #9ca3af; /* हल्का ग्रे रंग ताकि ध्यान कम जाए */
+            text-align: right; /* साइड में दिखाने के लिए */
+            margin-top: 15px;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 5px;
+        }
+        .upi-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #1e3a8a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="fee-section">
+    <span class="sub-text">लर्निंग मॉड्यूल / रजिस्ट्रेशन शुल्क</span>
+    
+    <!-- बड़ा सा ज़ीरो/फ्री -->
+    <span class="main-promo">₹0</span>
+    <span class="sub-text" style="color: #166534; font-weight: bold;">Free of Cost</span>
+
+    <!-- साइड में बहुत छोटा सा वास्तविक चार्ज -->
+    <span class="actual-cost">प्रशासनिक शुल्क: ₹100.00</span>
+    
+    <!-- यूपीआई बटन (डेटा में वास्तविक ₹100 ही ट्रांसफर होगा) -->
+    <a href="upi://pay?pa=8924030267@upi&pn=Prime%20Security&am=100.00&cu=INR" class="upi-btn">
+        आगे बढ़ें
+    </a>
+</div>
+
+</body>
+</html>
